@@ -24,6 +24,8 @@ package myCISC191project;
  *
  * ExpenseIncomeUserData is-a ...
  * ExpenseIncomeUserData is ...
+ * 
+ * ExpenseIncomeUserData
  */
 public class ExpenseIncomeUserData
 {
