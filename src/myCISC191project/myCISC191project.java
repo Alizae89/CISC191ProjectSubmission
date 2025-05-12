@@ -26,3 +26,11 @@
  * package-info is ...
  */
 package myCISC191project;
+public class myCISC191project
+{
+	public static void main(String[] args)
+	{
+		new BudgetCalculatorInterface();
+	}
+}
+
