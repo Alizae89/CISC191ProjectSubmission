@@ -30,7 +30,7 @@ public class myCISC191project
 {
 	public static void main(String[] args)
 	{
-		new BudgetCalculatorInterface();
+		new BudgetCalculatorInterface().setPreferredSize(null);
 	}
 }
 

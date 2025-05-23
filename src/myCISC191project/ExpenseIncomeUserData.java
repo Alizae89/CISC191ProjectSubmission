@@ -32,14 +32,16 @@ public class ExpenseIncomeUserData
 	private String description;
 	private Double transaction;
 	private String type;
+	private String expenditureType;
 	
 	
-	public ExpenseIncomeUserData(String date, String description, double transaction, String type)
+	public ExpenseIncomeUserData(String date, String description, double transaction, String type, String expenditureType)
 	{
 		this.date = date;
 		this.description = description;
 		this.transaction = transaction;
 		this.type = type;
+		this.expenditureType = expenditureType;
 	}
 	public String retrieveDate()
 	{
@@ -61,6 +63,11 @@ public class ExpenseIncomeUserData
 	public String retrieveType() 
 	{
 		return type;
+	}
+	
+	public String retrieveExpenditureType()
+	{
+		return expenditureType;
 	}
 	
 

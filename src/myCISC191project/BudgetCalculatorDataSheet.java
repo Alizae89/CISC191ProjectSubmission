@@ -21,6 +21,7 @@ package myCISC191project;
 
 import java.util.ArrayList;
 
+
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -33,7 +34,7 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 {
 	private final ArrayList<ExpenseIncomeUserData> entries;
 	
-	private final String[] columnNames = {"Date", "Description", "Transaction", "Type"};
+	private final String[] columnNames = {"Date", "Description", "Transaction", "Type", "Expenditure Type"};
 
 	
 	public BudgetCalculatorDataSheet()
@@ -52,6 +53,12 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 	public int getRowCount()
 	{
 		return entries.size();
+	}
+	
+	@Override
+	public String getColumnName(int column)
+	{
+		return columnNames[column];
 	}
 
 	@Override
@@ -78,6 +85,8 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 				return entry.retrieveTransaction();
 			case 3:
 				return entry.retrieveType();
+			case 4:
+				return entry.retrieveExpenditureType();
 			default: return null;
 		}
 	}
