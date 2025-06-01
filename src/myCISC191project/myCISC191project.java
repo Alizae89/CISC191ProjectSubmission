@@ -26,11 +26,14 @@
  * package-info is ...
  */
 package myCISC191project;
+
+import javax.swing.JFrame;
+
 public class myCISC191project
 {
 	public static void main(String[] args)
 	{
-		new BudgetCalculatorInterface().setPreferredSize(null);
+		new BudgetCalculatorInterface().setExtendedState(JFrame.MAXIMIZED_BOTH);
 	}
 }
 
