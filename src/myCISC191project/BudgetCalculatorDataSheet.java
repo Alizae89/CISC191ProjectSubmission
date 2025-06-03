@@ -22,17 +22,21 @@
 */
 package myCISC191project;
 
-import java.util.ArrayList;
+import java.util.ArrayList; //import library for ArrayList
 
-import javax.swing.table.AbstractTableModel;
+
+import javax.swing.table.AbstractTableModel; // import library for TableModel interface 
 
 /**
- * Purpose: The reponsibility of BudgetCalculatorDataSheet is ...
+ * Purpose: The responsibility of BudgetCalculatorDataSheet is to create the table model for the app. 
+ * The app will have 5 column names that will describe the entries in the list.
+ * The class will also create an array list called entries that will store the entries in the data model every time the insertEntry method is called.
  *
  * BudgetCalculatorDataSheet is-a ...
  * BudgetCalculatorDataSheet is ...
  */
 // BudgetCalculatorDataSheet IS-A AbstractTableModel
+//Overrides the various methods from AbstractTableModel superclass like getRowCount(), getColumnName(), getColumnCount(), getValueAt()
 public class BudgetCalculatorDataSheet extends AbstractTableModel
 { 
 	//dynamic as adjusts to number of items inserted and will store the objects from the ExpenseIncomeUserData constructor.
@@ -55,6 +59,7 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 	  * Purpose: The method is insert a new entry to the data model. Passes the entry, a reference variable which contains
 	  * the objects of ExpenseIncomeUserData as a parameter variable. Then the variable is add in the arraylist (entries).
 	  * @param entry
+	  * BudgetCalculatorDataSheet HAS-A insertEntry
 	  */
 	public void insertEntry(ExpenseIncomeUserData entry)
 	{
@@ -62,11 +67,12 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 		
 		//From Abstract Table Model Java Swing
 		//Notifies all listeners that rows in the range [firstRow, lastRow], inclusive, have been inserted.
-		fireTableRowsInserted(entries.size()-1, entries.size()-1); //the table adds a new row in the table model
+		fireTableRowsInserted(entries.size()-1, entries.size()-1); //the table adds a new row at the end of the table model 
 	}
 	
 	/**
 	 * Purpose: The method returns the number of rows in the data model
+	 * BudgetCalculatorDataSheet HAS-A getRowCount
 	 */
 	@Override
 	public int getRowCount()
@@ -75,6 +81,7 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 	}
 	/**
 	 * Purpose: The method returns the column name from the string array called columnNames based on the index value.
+	 * BudgetCalculatorDataSheet HAS-A getColumnName
 	 */
 	@Override
 	public String getColumnName(int column)
@@ -84,6 +91,7 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 
 	/**
 	 * Purpose: Returns the number of columns in the data model.
+	 * BudgetCalculatorDataSheet HAS-A getColumnCount
 	 */
 	@Override
 	public int getColumnCount()
@@ -93,6 +101,7 @@ public class BudgetCalculatorDataSheet extends AbstractTableModel
 
 	/**
 	 * Purpose: Acquires the entry based on the rowIndex and columnIndex values.
+	 * BudgetCalculatorDataSheet HAS-A getValueAt
 	 */
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex)

@@ -1,6 +1,7 @@
 /**
 * Lead Author(s):
 
+
 * @author alizae; student ID
 * @author Full name; student ID
 * <<Add additional lead authors here>>
@@ -49,28 +50,56 @@ public class ExpenseIncomeUserData
 		this.type = type; //this keyword, to initializes the variable type
 		this.expenditureType = expenditureType; // this keyword, to initializes the variable expenditureType
 	}
+	/**
+	 * 
+	 * Purpose: The getter method returns the date of the entry.
+	 * @return date
+	 * ExpenseIncomeUserData HAS-A retrieveDate
+	 */
 	public String retrieveDate()
 	{
 		return date;
 
 	}
 	
+	/**
+	 * 
+	 * Purpose: The getter method returns the description of the entry.
+	 * @return description
+	 * ExpenseIncomeUserData HAS-A retrieveDescription
+	 */
 	public String retrieveDescription()
 	{
 		return description;
 
 	}
 
+	/**
+	 * 
+	 * Purpose: The getter method returns the transaction of the entry.
+	 * @return transaction
+	 * ExpenseIncomeUserData HAS-A retrieveTransaction
+	 */
 	public double retrieveTransaction()
 	{
 		return transaction;
 	}
-
+	/**
+	 * 
+	 * Purpose: The getter method returns type (income or expenditure) of the entry.
+	 * @return type
+	 * ExpenseIncomeUserData HAS-A retrieveType
+	 */
 	public String retrieveType() 
 	{
 		return type;
 	}
-	
+	/**
+	 * 
+	 * Purpose: The getter method returns expenditure type of the entry.
+	 * @return
+	 * ExpenseIncomeUserData HAS-A retrieveExpenditureType
+	 */
 	public String retrieveExpenditureType()
 	{
 		return expenditureType;

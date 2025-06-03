@@ -27,13 +27,13 @@
  */
 package myCISC191project;
 
-import javax.swing.JFrame;
+import javax.swing.JFrame; //import JFrame swing library.
 
 public class myCISC191project
 {
 	public static void main(String[] args)
 	{
-		new BudgetCalculatorInterface().setExtendedState(JFrame.MAXIMIZED_BOTH);
+		new BudgetCalculatorInterface().setExtendedState(JFrame.MAXIMIZED_BOTH); //set the frame of the window to max size in width and height.
 	}
 }
 
