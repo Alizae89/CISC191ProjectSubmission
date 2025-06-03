@@ -262,7 +262,7 @@ public class BudgetCalculatorInterface extends JFrame
 		descriptionField = new JTextField(5); //Initializes the descriptionField as JTextField and passes the size equal to 5.
 		TransactionField = new JTextField(5); //initializes the TransactionField as JTextField and passes the size equal to 5
 		categoryBox = new JComboBox<>(new String[] {"Expense", "Income"}); //Initializes the categoryBox as JComboBox and add a new string array object with two values, Expense and Income inside the constructor (combo box)
-		expenseCategories = new JComboBox<>(new String[] {"Salary", "Food", "Transportation", "Utilities", "Entertainment", "Clothing", "Insurance"}); //Initializes the expenseCategories as JComboBox and inserts a new string array of objects with 7 values, 
+		expenseCategories = new JComboBox<>(new String[] {"Salary", "Food", "Transportation", "Utilities", "Entertainment", "Technology", "Clothing", "Insurance"}); //Initializes the expenseCategories as JComboBox and inserts a new string array of objects with 7 values, 
 		//Salary, Food, Transportation, Utilities, Entertainment, Clothing, and Insurance inside the constructor (combo box)
 		
 		addButton = new JButton("Add"); //Initializes the addButton as JButton with text, user clicks the button to add entries on the table.
